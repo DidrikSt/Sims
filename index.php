@@ -89,8 +89,12 @@ echo "Fakta<br><br><br>";
 </div>
 </div>
 </div>
-
-
+<br><br><br><br><br><br><br>
+<div style="text-align:center">
+<form method="POST" action="karta.php" >
+    <input type="submit" value="Lämna in"/>
+  </form>
+</div>
 </body>
 
 </html>
