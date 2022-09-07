@@ -13,13 +13,15 @@ body {
 <body>
 <?php
 echo "<h2>Projekt med Atea</h2>";
-echo "Fakta<br>";
+echo "Fakta<br><br><br>";
 ?>
+<!-- 
+    Container med bilderna och plus minus för att öka minska värde
+--> 
 <div class="container">
-    <div class="row text-center py-5">
+    <div>
         <div class="col-md-3 col-sm-6 my-3 my-md-0">
-         <div class="card shadow">
-         <div>
+
     <?PHP 
         $filepath= '\SIMS\uploads\mobil.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
@@ -38,11 +40,58 @@ echo "Fakta<br>";
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
-    </div>
-    </div>
-    </div>
-    </div>
+</div>
+</div>
+<div class="container">
+    <div class="row text-center py-5">
+        <div class="col-md-3 col-sm-6 my-3 my-md-0">
 
+    <?PHP 
+        $filepath= '\SIMS\uploads\laptop.jpg'; 
+        echo '<img src="'.$filepath.'" width="100%" 
+        height="100%">'; 
+    ?> 
+    <p>
+      </p><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="0" min="0" max="10">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+</div>
+</div>
+<div class="container">
+    <div class="row text-center py-5">
+        <div class="col-md-3 col-sm-6 my-3 my-md-0">
+
+    <?PHP 
+        $filepath= '\SIMS\uploads\skarm.jpg'; 
+        echo '<img src="'.$filepath.'" width="100%" 
+        height="100%">'; 
+    ?> 
+    <p>
+      </p><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[3]" class="form-control input-number" value="0" min="0" max="10">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+</div>
+</div>
+</div>
+</div>
 </body>
 
 </html>
