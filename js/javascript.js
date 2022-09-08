@@ -30,10 +30,17 @@ $('.btn-number').click(function(e){
     } else {
         input.val(0);
     }
+
+    var currentVal = parseInt(input.val());
+    var type = $(this).attr('data-field');
+    //facts(parseInt($('input[name='+fieldName+']').val()), type);
+    facts(currentVal, type);
 });
+
 $('.input-number').focusin(function(){
    $(this).data('oldValue', $(this).val());
 });
+
 $('.input-number').change(function() {
     
     minValue =  parseInt($(this).attr('min'));
@@ -53,9 +60,32 @@ $('.input-number').change(function() {
         alert('Sorry, the maximum value was reached');
         $(this).val($(this).data('oldValue'));
     }
-    
-    
+
 });
+
+function facts(amount, type){
+    // apples ipad är 80 kg / padda    https://www.apple.com/uk/environment/
+    // avrundar ner lite för apples skit är overpriced och jag antar de använder mer co2 / produkt
+    var kg;
+    if (type == "mobil") {
+        kg = amount * 70
+        document.getElementById('faktaMobil').innerHTML = amount + " mobiler orsakar " + kg +"kg co2";
+    }   
+    else if (type == "laptop") {
+        kg = amount * 160
+        document.getElementById('faktaLaptop').innerHTML = amount + " laptops orsakar " + kg +"kg co2";
+    }
+    else if (type == "skarm") {
+        kg = amount * 100
+        document.getElementById('faktaSkarm').innerHTML = amount + " skärmar orsakar " + kg +"kg co2";
+    }
+    else {
+        alert("no type that matches")
+    }
+};
+
+
+
 $(".input-number").keydown(function (e) {
         // Allow: backspace, delete, tab, escape, enter and .
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
