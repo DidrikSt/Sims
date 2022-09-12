@@ -31,17 +31,31 @@
             <th>&nbsp;Övrigt</th>              
             <th>&nbsp;pryl6</th>              
         </tr>
-        <tr>
-            <?php 
+        <?php 
+        echo "<tr>";
             echo "<td>&nbsp;" . $mobil . "</td>";
             echo "<td>&nbsp;" . $laptop. "</td>";
             echo "<td>&nbsp;" . $skarm . "</td>";
             echo "<td>&nbsp;" . $statdator . "</td>";
             echo "<td>&nbsp;" . $ovrigt . "</td>";
-            //echo "<td>&nbsp;" . $pryl6 . "</td>";
-            ?>
-            <td>&nbsp;pryl6</td>
-        </tr>
+            echo "<td>&nbsp;pryl6</td>";
+        echo "</tr>";
+        echo "<tr>";
+            echo "<td>&nbsp;" . $mobil*70 . " kg" . "</td>";
+            echo "<td>&nbsp;" . $mobil*160 . " kg" . "</td>";
+            echo "<td>&nbsp;" . $mobil*100 . " kg" . "</td>";
+            echo "<td>&nbsp;" . $mobil*520 . " kg" . "</td>";
+            echo "<td>&nbsp;" . $mobil*0 . " kg" . "</td>";
+            echo "<td>&nbsp;pryl6</td>";
+
+        echo "</tr>";
+        
+        ?>
+        
+
+
+        
+
     </table> <br />
     <?php 
         echo "<p id='Karta'>Karta där man lämnar sina tekniska enheter<br/></p>"; 
