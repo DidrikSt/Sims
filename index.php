@@ -23,6 +23,7 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
 <!-- 
     Container med bilderna och plus minus för att öka minska värde
 --> 
+<form method="POST" action="karta.php" >
 <div class="Wallpaper">
 <div class="container">
         <div class="box">
@@ -164,7 +165,7 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
 </div>
 <br><br><br><br><br><br><br>
 <div style="text-align:center">
-<form method="POST" action="karta.php" >
+
     <input type="submit" value="Lämna in"/>
   </form>
 </div>
