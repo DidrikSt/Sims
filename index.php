@@ -14,12 +14,19 @@ body {
 <body>
 <?php
 echo "<h2>Projekt med Atea</h2>";
-echo "<p id='faktaMobil'>Mobilfakta<br/></p>";
-echo "<p id='faktaLaptop'>LaptopFakta<br/></p>";
-echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
-
-
+echo "<br><br><br>";
 ?>
+<div class="feedback">
+<h1> Feedback <h1>
+<?php
+          echo "<p id='faktaMobil'>Mobilfakta<br/></p>";
+          echo "<p id='faktaLaptop'>LaptopFakta<br/></p>";
+          echo "<p id='faktaSkarm'>SkärmFakta<br/></p>";
+          echo "<p id='faktaStat'>StationärFakta<br/></p>";
+          echo "<p id='faktaOvrigt'>ÖvrigtFakta<br/></p>";
+            
+            ?>
+</div>
 <!-- 
     Container med bilderna och plus minus för att öka minska värde
 --> 
@@ -32,7 +39,8 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
         $filepath= 'uploads\mobil.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
         height="100%">'; 
-    ?> 
+        
+    ?>
     <p>
       </p><div class="input-group">
           <span class="input-group-btn">
@@ -48,6 +56,7 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
           </span>
 
 </div>
+
 </div>
         <div class="box">
         <p> Laptop </p>
@@ -99,7 +108,7 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
 <div class="box">
         <p> Stationär </p>
     <?PHP 
-        $filepath= 'uploads\skarm.jpg'; 
+        $filepath= 'uploads\stationar.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
         height="100%">'; 
     ?> 
@@ -121,7 +130,7 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
 <div class="box">
         <p> Övrigt </p>
     <?PHP 
-        $filepath= 'uploads\skarm.jpg'; 
+        $filepath= 'uploads\ovrigt.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
         height="100%">'; 
     ?> 
@@ -141,9 +150,9 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
 </div>
 </div>
 <div class="box">
-        <p> Skärm </p>
+        <p> Tomt tillfälligt </p>
     <?PHP 
-        $filepath= 'uploads\skarm.jpg'; 
+        $filepath= 'uploads\.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
         height="100%">'; 
     ?> 
