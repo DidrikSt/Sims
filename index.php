@@ -14,7 +14,11 @@ body {
 <body>
 <?php
 echo "<h2>Projekt med Atea</h2>";
-echo "Fakta<br><br><br>";
+echo "<p id='faktaMobil'>Mobilfakta<br/></p>";
+echo "<p id='faktaLaptop'>LaptopFakta<br/></p>";
+echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
+
+
 ?>
 <!-- 
     Container med bilderna och plus minus för att öka minska värde
@@ -31,13 +35,13 @@ echo "Fakta<br><br><br>";
     <p>
       </p><div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="mobil">
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[1]" class="form-control input-number" value="0" min="0" max="10">
+          <input type="text" name="mobil" class="form-control input-number" value="0" min="0" max="10">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="mobil">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
@@ -54,13 +58,13 @@ echo "Fakta<br><br><br>";
     <p>
       </p><div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="laptop">
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[2]" class="form-control input-number" value="0" min="0" max="10">
+          <input type="text" name="laptop" class="form-control input-number" value="0" min="0" max="10">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="laptop">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
@@ -77,22 +81,22 @@ echo "Fakta<br><br><br>";
     <p>
       </p><div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="skarm">
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[3]" class="form-control input-number" value="0" min="0" max="10">
+          <input type="text" name="skarm" class="form-control input-number" value="0" min="0" max="10">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="skarm">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
 </div>
 </div>
-</div><br><br><br><br>
-<div class="container">
+</div>
+<div class ="container">
 <div class="box">
-        <p> Skärm </p>
+        <p> Stationär </p>
     <?PHP 
         $filepath= 'uploads\skarm.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
@@ -101,20 +105,20 @@ echo "Fakta<br><br><br>";
     <p>
       </p><div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[4]">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="statdator">
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[3]" class="form-control input-number" value="0" min="0" max="10">
+          <input type="text" name="statdator" class="form-control input-number" value="0" min="0" max="10">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[4]">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="statdator">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
 </div>
 </div>
 <div class="box">
-        <p> Skärm </p>
+        <p> Övrigt </p>
     <?PHP 
         $filepath= 'uploads\skarm.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
@@ -123,13 +127,13 @@ echo "Fakta<br><br><br>";
     <p>
       </p><div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[5]">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="ovrigt">
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[3]" class="form-control input-number" value="0" min="0" max="10">
+          <input type="text" name="ovrigt" class="form-control input-number" value="0" min="0" max="10">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[5]">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="ovrigt">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
@@ -151,7 +155,7 @@ echo "Fakta<br><br><br>";
           </span>
           <input type="text" name="quant[3]" class="form-control input-number" value="0" min="0" max="10">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[6]">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="statdator">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
@@ -168,4 +172,3 @@ echo "Fakta<br><br><br>";
 
 </html>
 <script><?php include "./js/javascript.js"; ?></script>
-
