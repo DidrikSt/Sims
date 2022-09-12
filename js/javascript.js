@@ -79,6 +79,14 @@ function facts(amount, type){
         kg = amount * 100
         document.getElementById('faktaSkarm').innerHTML = amount + " skärmar orsakar " + kg +"kg co2";
     }
+    else if (type == "statdator") {
+        kg = amount * 520
+        document.getElementById('faktaStat').innerHTML = amount + " Stationära orsakar " + kg +"kg co2";
+    }
+    else if (type == "ovrigt") {
+        kg = amount * 0
+        document.getElementById('faktaOvrigt').innerHTML = amount + " Övrigt orsakar ungefär " + kg +"kg co2";
+    }
     else {
         alert("no type that matches")
     }
