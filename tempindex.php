@@ -23,11 +23,12 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
 <!-- 
     Container med bilderna och plus minus för att öka minska värde
 --> 
+<div class="Wallpaper">
 <div class="container">
         <div class="box">
         <p> Mobiltelefon </p>
     <?PHP 
-        $filepath= '\uploads\mobil.jpg'; 
+        $filepath= 'uploads\mobil.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
         height="100%">'; 
     ?> 
@@ -50,7 +51,7 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
         <div class="box">
         <p> Laptop </p>
     <?PHP 
-        $filepath= '\uploads\laptop.jpg'; 
+        $filepath= 'uploads\laptop.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
         height="100%">'; 
     ?> 
@@ -73,7 +74,7 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
 <div class="box">
         <p> Skärm </p>
     <?PHP 
-        $filepath= '\uploads\skarm.jpg'; 
+        $filepath= 'uploads\skarm.jpg'; 
         echo '<img src="'.$filepath.'" width="100%" 
         height="100%">'; 
     ?> 
@@ -87,6 +88,74 @@ echo "<p id='faktaSkarm'>SkarmFakta<br/></p>";
           <input type="text" name="skarm" class="form-control input-number" value="0" min="0" max="10">
           <span class="input-group-btn">
               <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="skarm">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+</div>
+</div>
+</div>
+<div class ="container">
+<div class="box">
+        <p> Stationär </p>
+    <?PHP 
+        $filepath= 'uploads\skarm.jpg'; 
+        echo '<img src="'.$filepath.'" width="100%" 
+        height="100%">'; 
+    ?> 
+    <p>
+      </p><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="statdator">
+                  <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="statdator" class="form-control input-number" value="0" min="0" max="10">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="statdator">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+</div>
+</div>
+<div class="box">
+        <p> Övrigt </p>
+    <?PHP 
+        $filepath= 'uploads\skarm.jpg'; 
+        echo '<img src="'.$filepath.'" width="100%" 
+        height="100%">'; 
+    ?> 
+    <p>
+      </p><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="ovrigt">
+                  <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="ovrigt" class="form-control input-number" value="0" min="0" max="10">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="ovrigt">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+</div>
+</div>
+<div class="box">
+        <p> Skärm </p>
+    <?PHP 
+        $filepath= 'uploads\skarm.jpg'; 
+        echo '<img src="'.$filepath.'" width="100%" 
+        height="100%">'; 
+    ?> 
+    <p>
+      </p><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[6]">
+                  <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[3]" class="form-control input-number" value="0" min="0" max="10">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="statdator">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
