@@ -17,8 +17,8 @@
     $mobil = $_POST["mobil"];
     $laptop= $_POST["laptop"];
     $skarm = $_POST["skarm"];
-    //$pryl4 = $_POST["pryl4"];
-    //$pryl5 = $_POST["pryl5"];
+    $statdator = $_POST["statdator"];
+    $ovrigt = $_POST["ovrigt"];
     //$pryl6 = $_POST["pryl6"];
     ?>
     <p id="sammanställningsID"> Sammanställning av dina elektroniska apparater
@@ -27,8 +27,8 @@
             <th>&nbsp;Mobiler</th> <!-- &nbsp; är whitespace för html är konstig.-->         
             <th>&nbsp;Laptops</th>        
             <th>&nbsp;Skärmar</th>              
-            <th>&nbsp;pryl4</th>              
-            <th>&nbsp;pryl5</th>              
+            <th>&nbsp;Stationär dator</th>              
+            <th>&nbsp;Övrigt</th>              
             <th>&nbsp;pryl6</th>              
         </tr>
         <tr>
@@ -36,14 +36,11 @@
             echo "<td>&nbsp;" . $mobil . "</td>";
             echo "<td>&nbsp;" . $laptop. "</td>";
             echo "<td>&nbsp;" . $skarm . "</td>";
-            //echo "<td>&nbsp;" . $pryl4 . "</td>";
-            //echo "<td>&nbsp;" . $pryl5 . "</td>";
+            echo "<td>&nbsp;" . $statdator . "</td>";
+            echo "<td>&nbsp;" . $ovrigt . "</td>";
             //echo "<td>&nbsp;" . $pryl6 . "</td>";
             ?>
-            <td>&nbsp;pryl4</td>
-            <td>&nbsp;pryl5</td>
             <td>&nbsp;pryl6</td>
-
         </tr>
     </table> <br />
     <?php 
