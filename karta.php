@@ -42,10 +42,10 @@
         echo "</tr>";
         echo "<tr>";
             echo "<td>&nbsp;" . $mobil*70 . " kg" . "</td>";
-            echo "<td>&nbsp;" . $mobil*160 . " kg" . "</td>";
-            echo "<td>&nbsp;" . $mobil*100 . " kg" . "</td>";
-            echo "<td>&nbsp;" . $mobil*520 . " kg" . "</td>";
-            echo "<td>&nbsp;" . $mobil*0 . " kg" . "</td>";
+            echo "<td>&nbsp;" . $laptop*160 . " kg" . "</td>";
+            echo "<td>&nbsp;" . $skarm*100 . " kg" . "</td>";
+            echo "<td>&nbsp;" . $statdator*520 . " kg" . "</td>";
+            echo "<td>&nbsp;" . $ovrigt*0 . " kg" . "</td>";
             echo "<td>&nbsp;pryl6</td>";
 
         echo "</tr>";
@@ -57,7 +57,10 @@
         
 
     </table> <br />
+
     <?php 
+        //totala mängden co2 behövs uppdateras med övrigt och pryl 6
+        echo "Totala mängden co2: " . $mobil*70 + $laptop*160 + $skarm*100 + $statdator*520;
         echo "<p id='Karta'>Karta där man lämnar sina tekniska enheter<br/></p>"; 
     ?>        
     <div id='map'></div>   <!--Det är div id='map' som skapar själva kartan -->
