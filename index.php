@@ -15,7 +15,7 @@
 
 <body>
     <?php
-echo "<h2>Projekt med Atea</h2>";
+echo "<h2>Inlämnings Enkät</h2>";
 echo "<br><br><br>";
 ?>
     <div class="feedback">
@@ -168,7 +168,7 @@ echo '<img src="' . $filepath . '" width="100%"
                     </div>
                 </div>
                 <div class="box">
-                    <p> Tomt tillfälligt </p>
+                    <p> Surfplatta </p>
                     <?PHP
 $filepath = 'uploads\.jpg';
 echo '<img src="' . $filepath . '" width="100%" 
