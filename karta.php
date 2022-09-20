@@ -27,6 +27,7 @@ if (isset($_POST['mobil'], $_POST['laptop'], $_POST['skarm'], $_POST['statdator'
 <!DOCTYPE html>
 
 <head>
+    <?php include 'navbar.php'?>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>

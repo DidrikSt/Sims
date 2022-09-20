@@ -1,0 +1,86 @@
+
+  /* NAVBAR START */
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style:none;
+    /*border: 5px solid red;*/
+  }
+  
+  li {
+    margin: 0 2rem;
+  }
+  
+  .nav a{
+     text-decoration: none;
+     color:white;
+  }
+  
+  .nav{
+      position: fixed;
+      background-color: black;
+      display:flex;
+      width: 100%;
+      font-size: 17pt;
+      z-index: 10;
+      top: 0;
+      /*border: 5px solid red;*/
+  }
+  
+  .nav_logo{
+      padding-left: 40px;
+      font-size: 25pt;
+      font-family: "Srisakdi", cursive;
+      font-weight: bold;  
+      text-decoration: none;
+      padding-right: 40px;
+      /*border: 5px solid red;*/
+  }
+
+  .nav_logo a:hover{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav_links{
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      width: 80%;
+      padding: 0.8%;
+      vertical-align:middle;
+      /*border: 5px solid gold;*/
+  }
+  
+  .nav_links a{
+      padding: 0vh 3vw 0vh 3vw;
+      display: block;
+      position: relative;
+  }
+  
+  .nav_links a:hover{
+      color: rgb(160, 160, 160);
+      text-decoration: none;
+  }
+  
+  /* Fade in */
+  .nav_links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: yellow;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .nav_links a:hover::after,
+  .nav_links a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+  }
+  /* NAVBAR END */
+  
