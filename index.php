@@ -23,8 +23,7 @@
 <div class="background-image"></div>
 >>>>>>> Stashed changes
     <?php
-echo "<h2>Inlämnings Enkät</h2>";
-echo "<br><br><br>";
+echo "<br><br><br><br><br><br>";
 ?>
     <div class="feedback">
         <h1> Feedback <h1>
