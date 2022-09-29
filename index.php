@@ -7,6 +7,7 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/css.css">
+<<<<<<< Updated upstream
     <style>
 
     </style>
@@ -14,6 +15,13 @@
 
 <body>
     <!---->
+=======
+
+</head>
+
+<body>
+<div class="background-image"></div>
+>>>>>>> Stashed changes
     <?php
 echo "<h2>Inlämnings Enkät</h2>";
 echo "<br><br><br>";
@@ -170,7 +178,7 @@ echo '<img src="' . $filepath . '" width="100%"
                 <div class="box">
                     <p> Surfplatta </p>
                     <?PHP
-$filepath = 'uploads\.jpg';
+$filepath = 'uploads\tablet.jpg';
 echo '<img src="' . $filepath . '" width="100%" 
         height="100%">';
 ?>
