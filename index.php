@@ -7,21 +7,8 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/css.css">
-<<<<<<< Updated upstream
-    <style>
-
-    </style>
 </head>
-
 <body>
-    <!---->
-=======
-
-</head>
-
-<body>
-<div class="background-image"></div>
->>>>>>> Stashed changes
     <?php
 echo "<br><br><br><br><br><br>";
 ?>
@@ -200,8 +187,8 @@ echo '<img src="' . $filepath . '" width="100%"
                     </div>
                 </div>
             </div>
-            <br><br><br><br><br><br><br>
-            <div style="text-align:center">
+            <br><br><br>
+            <div style="text-align:center" >
 
                 <input type="submit" value="Lämna in" />
     </form>
