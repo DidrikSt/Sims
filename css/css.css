@@ -2,7 +2,7 @@ p#Karta {
   text-align: center;
 }
 body {
-  background-color: lightblue;
+  background-color: white;
 }
 p {
   text-align: center;
@@ -31,7 +31,7 @@ p {
   font-size: 15px;
   text-align: center;
 }
-#faktaOvrigt {
+#faktaSurfplatta {
   text-align: left;
   margin: 5px;
   font-size: 15px;
@@ -51,7 +51,7 @@ p {
   top: 40%; /* Modified */
   left: 80%; /* Modified */
   vertical-align: top;
-  background-color: linen;
+  background-color: #84daa9;
   box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 .Wallpaper {
@@ -117,4 +117,20 @@ table,
 th,
 td {
   border: 1px solid black;
+}
+#submit {
+  width: 10em;
+  height: 5em;
+  background-color: #84daa9;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 25px;
+}
+#submit:hover {
+  color: white;
+  text-decoration: none;
 }

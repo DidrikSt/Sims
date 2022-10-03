@@ -19,7 +19,8 @@ echo "<p id='faktaMobil'>Mobilfakta<br/></p>";
 echo "<p id='faktaLaptop'>LaptopFakta<br/></p>";
 echo "<p id='faktaSkarm'>SkärmFakta<br/></p>";
 echo "<p id='faktaStat'>StationärFakta<br/></p>";
-echo "<p id='faktaOvrigt'>ÖvrigtFakta<br/></p>";
+echo "<p id='faktaSurfplatta'>Surfplatta<br/></p>";
+echo "<p id='all'>Allt<br/></p>";
 
 ?>
     </div>
@@ -137,31 +138,6 @@ echo '<img src="' . $filepath . '" width="100%"
                     </div>
                 </div>
                 <div class="box">
-                    <p> Övrigt </p>
-                    <?PHP
-$filepath = 'uploads\ovrigt.jpg';
-echo '<img src="' . $filepath . '" width="100%" 
-        height="100%">';
-?>
-                    <p>
-                    </p>
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-number" disabled="disabled"
-                                data-type="minus" data-field="ovrigt">
-                                <span class="glyphicon glyphicon-minus"></span>
-                            </button>
-                        </span>
-                        <input type="text" name="ovrigt" class="form-control input-number" value="0" min="0" max="10">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-number" data-type="plus"
-                                data-field="ovrigt">
-                                <span class="glyphicon glyphicon-plus"></span>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-                <div class="box">
                     <p> Surfplatta </p>
                     <?PHP
 $filepath = 'uploads\tablet.jpg';
@@ -173,14 +149,14 @@ echo '<img src="' . $filepath . '" width="100%"
                     <div class="input-group">
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-default btn-number" disabled="disabled"
-                                data-type="minus" data-field="quant[6]">
+                                data-type="minus" data-field="surfplatta">
                                 <span class="glyphicon glyphicon-minus"></span>
                             </button>
                         </span>
-                        <input type="text" name="quant[3]" class="form-control input-number" value="0" min="0" max="10">
+                        <input type="text" name="surfplatta" class="form-control input-number" value="0" min="0" max="10">
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-default btn-number" data-type="plus"
-                                data-field="statdator">
+                                data-field="surfplatta">
                                 <span class="glyphicon glyphicon-plus"></span>
                             </button>
                         </span>
@@ -190,7 +166,7 @@ echo '<img src="' . $filepath . '" width="100%"
             <br><br><br>
             <div style="text-align:center" >
 
-                <input type="submit" value="Lämna in" />
+                <input type="submit" id="submit" value="Lämna in" />
     </form>
     </div>
     </body>
