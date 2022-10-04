@@ -1,5 +1,6 @@
 p#Karta {
   text-align: center;
+  font-weight: bold;
 }
 body {
   background-color: white;
@@ -112,6 +113,9 @@ img {
   width: 30px;
   height: 30px;
 }
+#sammanställningsID {
+  font-size: 30px;
+}
 
 table,
 th,
@@ -133,4 +137,51 @@ td {
 #submit:hover {
   color: white;
   text-decoration: none;
+}
+.fl-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.fl-table td,
+.fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.fl-table th {
+  color: black;
+  background: #84daa9;
+}
+
+.fl-table th:nth-child(odd) {
+  color: black;
+  background: white;
+}
+
+.fl-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+.total {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  border: 3px solid black;
+  width: 300px;
+  padding: 10px 20px;
+  background: #84daa9;
+  margin: auto;
+  align-content: center;
 }

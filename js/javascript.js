@@ -7,6 +7,7 @@ $(".btn-number").click(function (e) {
   type = $(this).attr("data-type");
   var input = $("input[name='" + fieldName + "']");
   var currentVal = parseInt(input.val());
+
   if (!isNaN(currentVal)) {
     if (type == "minus") {
       if (currentVal > input.attr("min")) {
@@ -82,14 +83,13 @@ function facts(amount, type) {
     document.getElementById("faktaStat").innerHTML =
       amount + " Stationära orsakar " + kg + "kg co2";
   } else if (type == "surfplatta") {
-    kg = amount * 0;
+    kg = amount * 100;
     document.getElementById("faktaSurfplatta").innerHTML =
       amount + " Surfplatta orsakar " + kg + "kg co2";
   } else {
     alert("no type that matches");
   }
 }
-
 $(".input-number").keydown(function (e) {
   // Allow: backspace, delete, tab, escape, enter and .
   if (

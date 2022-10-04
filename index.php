@@ -20,8 +20,6 @@ echo "<p id='faktaLaptop'>LaptopFakta<br/></p>";
 echo "<p id='faktaSkarm'>SkärmFakta<br/></p>";
 echo "<p id='faktaStat'>StationärFakta<br/></p>";
 echo "<p id='faktaSurfplatta'>Surfplatta<br/></p>";
-echo "<p id='all'>Allt<br/></p>";
-
 ?>
     </div>
     <!-- 

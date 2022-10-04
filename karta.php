@@ -48,18 +48,17 @@ $mobil = $_POST["mobil"];
 $laptop = $_POST["laptop"];
 $skarm = $_POST["skarm"];
 $statdator = $_POST["statdator"];
-$ovrigt = $_POST["ovrigt"];
+$surfplatta = $_POST["surfplatta"];
 //$pryl6 = $_POST["pryl6"];
 ?>
-    <p id="sammanställningsID"> Sammanställning av dina elektroniska apparater
-    <table id="tabell" style="width:100%">
+    <br><p id="sammanställningsID"> Sammanställning av dina elektroniska apparater
+    <table class="fl-table" id="tabell" style="width:100%">
         <tr>
             <th>&nbsp;Mobiler</th> <!-- &nbsp; är whitespace för html är konstig.-->
             <th>&nbsp;Laptops</th>
             <th>&nbsp;Skärmar</th>
             <th>&nbsp;Stationär dator</th>
-            <th>&nbsp;Övrigt</th>
-            <th>&nbsp;pryl6</th>
+            <th>&nbsp;Surfplatta</th>
         </tr>
         <?php
 echo "<tr>";
@@ -67,30 +66,26 @@ echo "<td>&nbsp;" . $mobil . "</td>";
 echo "<td>&nbsp;" . $laptop . "</td>";
 echo "<td>&nbsp;" . $skarm . "</td>";
 echo "<td>&nbsp;" . $statdator . "</td>";
-echo "<td>&nbsp;" . $ovrigt . "</td>";
-echo "<td>&nbsp;pryl6</td>";
+echo "<td>&nbsp;" . $surfplatta . "</td>";
 echo "</tr>";
 echo "<tr>";
 echo "<td>&nbsp;" . $mobil * 70 . " kg" . "</td>";
 echo "<td>&nbsp;" . $laptop * 160 . " kg" . "</td>";
 echo "<td>&nbsp;" . $skarm * 100 . " kg" . "</td>";
 echo "<td>&nbsp;" . $statdator * 520 . " kg" . "</td>";
-echo "<td>&nbsp;" . $ovrigt * 0 . " kg" . "</td>";
-echo "<td>&nbsp;pryl6</td>";
+echo "<td>&nbsp;" . $surfplatta * 100 . " kg" . "</td>";
 
 echo "</tr>";
 
 ?>
-
-
-
-
-
-    </table> <br />
-
-    <?php
+</table> <br />
+   <div class="total">
+   <?php
 //totala mängden co2 behövs uppdateras med övrigt och pryl 6
-echo "Totala mängden co2: " . $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520;
+echo "Totala mängden co2: " . $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100;
+?>
+</div>
+<?php
 echo "<p id='Karta'>Karta där man lämnar sina tekniska enheter<br/></p>";
 ?>
     <div id='map'></div>
