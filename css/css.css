@@ -7,35 +7,20 @@ body {
 }
 p {
   text-align: center;
+  font-size: 40%;
 }
-#faktaMobil {
-  text-align: left;
-  margin: 5px;
-  font-size: 15px;
-  text-align: center;
+#feedback {
+  font-size: 50px;
+  font-weight: bold;
 }
-#faktaLaptop {
-  text-align: left;
-  margin: 5px;
-  font-size: 15px;
-  text-align: center;
-}
-#faktaSkarm {
-  text-align: left;
-  margin: 5px;
-  font-size: 15px;
-  text-align: center;
-}
-#faktaStat {
-  text-align: left;
-  margin: 5px;
-  font-size: 15px;
-  text-align: center;
-}
+#faktaMobil,
+#faktaLaptop,
+#faktaSkarm,
+#faktaStat,
 #faktaSurfplatta {
   text-align: left;
-  margin: 5px;
-  font-size: 15px;
+  margin: 25px;
+  font-size: 27px;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -45,19 +30,21 @@ p {
   }
 }
 .feedback {
+  float: right;
   text-align: center;
-  position: absolute; /* Added */
-  height: 40%;
-  width: 18%;
-  top: 40%; /* Modified */
-  left: 80%; /* Modified */
-  vertical-align: top;
+  height: auto;
+  width: 35%;
+  margin-right: 1%;
   background-color: #84daa9;
+  border-radius: 3px;
+  border: solid 1px #999;
   box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 .Wallpaper {
   margin: auto;
-  width: 80%;
+  float: left;
+  margin-left: 1%;
+  width: 60%;
   background-color: white;
   padding: 20px;
   background-color: #fff;
@@ -71,15 +58,15 @@ p {
 }
 img {
   float: left;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border: solid 1px #999;
   box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15);
   margin: 4px;
 }
 .container {
-  width: 50%;
+  width: 70%;
   height: auto;
   /*display: flex;
   align-items: stretch;
@@ -89,18 +76,20 @@ img {
   justify-content: space-around;
 }
 .box {
-  width: 350px;
+  width: 60%;
   height: auto;
   margin: 20px;
   box-sizing: border-box;
   font-size: 50px;
 }
 
+input {
+  width: 100%;
+}
 #map {
   height: 500px;
   width: 100%;
 }
-
 @media only screen and (max-width: 767px) {
   #map {
     height: 300px;

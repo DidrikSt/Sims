@@ -5,7 +5,7 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=768px, initial-scale=1.0">
     <link rel="stylesheet" href="./css/css.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
 echo "<br><br><br><br><br><br>";
 ?>
     <div class="feedback">
-        <h1> Feedback <h1>
+        <h1 id="feedback"> Feedback <h1>
                 <?php
 echo "<p id='faktaMobil'>Mobilfakta<br/></p>";
 echo "<p id='faktaLaptop'>LaptopFakta<br/></p>";
@@ -22,6 +22,7 @@ echo "<p id='faktaStat'>StationärFakta<br/></p>";
 echo "<p id='faktaSurfplatta'>Surfplatta<br/></p>";
 ?>
     </div>
+    
     <!-- 
     Container med bilderna och plus minus för att öka minska värde
 -->
@@ -161,6 +162,7 @@ echo '<img src="' . $filepath . '" width="100%"
                     </div>
                 </div>
             </div>
+            
             <br><br><br>
             <div style="text-align:center" >
 
