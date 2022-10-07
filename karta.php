@@ -2,13 +2,13 @@
 require_once('./api.php');
 $db = new api;
 
-if (isset($_POST['mobil'], $_POST['laptop'], $_POST['skarm'], $_POST['statdator'], $_POST['ovrigt'])) {
+if (isset($_POST['mobil'], $_POST['laptop'], $_POST['skarm'], $_POST['statdator'], $_POST['surfplatta'])) {
     $insertable = $db->insertNewItem([
-        'phone' => $_POST['mobil'],
+        'mobil' => $_POST['mobil'],
         'laptop' => $_POST['laptop'],
-        'monitor' => $_POST['skarm'],
-        'stationary' => $_POST['statdator'],
-        'misc' => $_POST['ovrigt']
+        'skarm' => $_POST['skarm'],
+        'statdator' => $_POST['statdator'],
+        'surfplatta' => $_POST['surfplatta']
     ]);
     if ($insertable) {
 

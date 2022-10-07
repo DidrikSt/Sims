@@ -13,11 +13,11 @@ class api
     }
     //insert data
     $insertable = $this->db->insertOne([
-      'phone' => $itemInfo['phone'],
+      'mobil' => $itemInfo['mobil'],
       'laptop' => $itemInfo['laptop'],
-      'monitor' => $itemInfo['monitor'],
-      'stationary' => $itemInfo['stationary'],
-      'misc' => $itemInfo['misc']
+      'skarm' => $itemInfo['skarm'],
+      'statdator' => $itemInfo['statdator'],
+      'surfplatta' => $itemInfo['surfplatta']
     ]);
     //return this inserted documents mongodb id
     return $insertable->getInsertedId();
