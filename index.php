@@ -10,8 +10,8 @@
 </head>
 <body>
     <?php
-echo "<br><br><br><br><br><br>";
-?>
+    echo "<br><br><br><br>"
+    ?>
     <div class="feedback">
         <h1 id="feedback"> Feedback <h1>
                 <?php
@@ -28,6 +28,10 @@ echo "<p id='faktaSurfplatta'>Surfplatta<br/></p>";
 -->
     <form method="POST" action="karta.php">
         <div class="Wallpaper">
+        <div class="sammanfattning">
+        <h2> Vi vill veta en uppskattning på ungefär hur mycket av dessa 5 sakerna som du har liggandes hemma som kan tänkas återanvändas eller återvinnas. 
+            Du får reda på hur mycket co2 detta skulle spara och på nästa sida får du reda på hur du ska gå tillväga och hur mycket alla dina saker du lämnar in hade kunnat vara istället.</h2>
+</div>
             <div class="container">
                 <div class="box">
                     <p> Mobiltelefon </p>
@@ -110,7 +114,7 @@ echo '<img src="' . $filepath . '" width="100%"
                 </div>
             </div>
             <div class="container">
-                <div class="box">
+                <div class="box2">
                     <p> Stationär </p>
                     <?PHP
 $filepath = 'uploads\stationar.jpg';
@@ -136,7 +140,7 @@ echo '<img src="' . $filepath . '" width="100%"
                         </span>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box2">
                     <p> Surfplatta </p>
                     <?PHP
 $filepath = 'uploads\tablet.jpg';

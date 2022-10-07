@@ -82,7 +82,27 @@ echo "</tr>";
    <div class="total">
    <?php
 //totala mängden co2 behövs uppdateras med övrigt och pryl 6
-echo "Totala mängden co2: " . $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100;
+echo "Totala mängden co2: " . $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100 . "kg";
+?><br>
+<?php
+$Total = $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100;
+if ($Total == 0){
+echo "Detta är inget";
+}
+elseif ($Total < 100){
+    echo "Detta är samma sak som";
+}
+elseif ($Total < 1000) {
+   echo "Detta är mycket";
+}
+elseif ($Total < 2000){
+    echo "Detta är jättemycket";
+}
+elseif ($Total < 4000){
+    echo "Detta är jättemycket";
+}
+
+
 ?>
 </div>
 <?php
