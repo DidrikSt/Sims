@@ -23,6 +23,7 @@ if (isset($_POST['mobil'], $_POST['laptop'], $_POST['skarm'], $_POST['statdator'
 //    'misc' => '5'
 //]));
 //exit();
+error_reporting(E_ERROR | E_PARSE);
 ?>
 <!DOCTYPE html>
 
