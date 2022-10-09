@@ -20,7 +20,6 @@
                 <ul>
                     <li><a href=karta.php>Karta</a></li>
                     <li><a href=fakta.php>Fakta</a></li>
-                    <li><a href="#section_3">Gamification</a></li>
                     <li><a href=omoss.php>Om oss</a></li>
                 </ul>
             </div>         
