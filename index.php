@@ -7,6 +7,7 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta name="viewport" content="width=768px, initial-scale=1.0">
     <link rel="stylesheet" href="./css/css.css">
+
 </head>
 <body>
     <?php
@@ -14,18 +15,16 @@
     ?>
     <div class="feedback">
         <h1 id="feedback"> Feedback <h1>
-                <?php
-echo "<p id='faktaMobil'>Mobilfakta<br/></p>";
-echo "<p id='faktaLaptop'>LaptopFakta<br/></p>";
-echo "<p id='faktaSkarm'>SkärmFakta<br/></p>";
-echo "<p id='faktaStat'>StationärFakta<br/></p>";
-echo "<p id='faktaSurfplatta'>Surfplatta<br/></p>";
-?>
+            <?php
+                echo "<p id='faktaMobil'>Mobilfakta<br/></p>";
+                echo "<p id='faktaLaptop'>LaptopFakta<br/></p>";
+                echo "<p id='faktaSkarm'>SkärmFakta<br/></p>";
+                echo "<p id='faktaStat'>StationärFakta<br/></p>";
+                echo "<p id='faktaSurfplatta'>Surfplatta<br/></p>";
+            ?>
     </div>
     
-    <!-- 
-    Container med bilderna och plus minus för att öka minska värde
--->
+    <!-- Container med bilderna och plus minus för att öka minska värde -->
     <form method="POST" action="karta.php">
         <div class="Wallpaper">
         <div class="sammanfattning">
@@ -34,7 +33,7 @@ echo "<p id='faktaSurfplatta'>Surfplatta<br/></p>";
 </div>
             <div class="container">
                 <div class="box">
-                    <p> Mobiltelefon </p>
+                    <p id="hoverP"> Mobiltelefon  * </p> 
                     <?PHP
 $filepath = 'uploads\mobil.jpg';
 echo '<img src="' . $filepath . '" width="100%" 

@@ -111,6 +111,9 @@ $(".input-number").keydown(function (e) {
   }
 });
 
+// document.getElementById('searchbutton').addEventListener("click", function(e){
+
+
 function mapContent() {
   var api_key = "QISAgbgPAJM82OrxXXStAQ34NIBwkrvd";
   var latAndLong = { lat: 62.39183290119345, lng: 17.307594418293636 };
