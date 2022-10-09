@@ -2,13 +2,13 @@
 require_once('./api.php');
 $db = new api;
 
-if (isset($_POST['mobil'], $_POST['laptop'], $_POST['skarm'], $_POST['statdator'], $_POST['ovrigt'])) {
+if (isset($_POST['mobil'], $_POST['laptop'], $_POST['skarm'], $_POST['statdator'], $_POST['surfplatta'])) {
     $insertable = $db->insertNewItem([
-        'phone' => $_POST['mobil'],
+        'mobil' => $_POST['mobil'],
         'laptop' => $_POST['laptop'],
-        'monitor' => $_POST['skarm'],
-        'stationary' => $_POST['statdator'],
-        'misc' => $_POST['ovrigt']
+        'skarm' => $_POST['skarm'],
+        'statdator' => $_POST['statdator'],
+        'surfplatta' => $_POST['surfplatta']
     ]);
     if ($insertable) {
 
@@ -52,62 +52,62 @@ $surfplatta = $_POST["surfplatta"];
 //$pryl6 = $_POST["pryl6"];
 ?>
     <br><p id="sammanställningsID"> Sammanställning av dina elektroniska apparater
-    <table class="fl-table" id="tabell" style="width:100%">
-        <tr>
-            <th>&nbsp;Mobiler</th> <!-- &nbsp; är whitespace för html är konstig.-->
-            <th>&nbsp;Laptops</th>
-            <th>&nbsp;Skärmar</th>
-            <th>&nbsp;Stationär dator</th>
-            <th>&nbsp;Surfplatta</th>
-        </tr>
-        <?php
-echo "<tr>";
-echo "<td>&nbsp;" . $mobil . "</td>";
-echo "<td>&nbsp;" . $laptop . "</td>";
-echo "<td>&nbsp;" . $skarm . "</td>";
-echo "<td>&nbsp;" . $statdator . "</td>";
-echo "<td>&nbsp;" . $surfplatta . "</td>";
-echo "</tr>";
-echo "<tr>";
-echo "<td>&nbsp;" . $mobil * 70 . " kg" . "</td>";
-echo "<td>&nbsp;" . $laptop * 160 . " kg" . "</td>";
-echo "<td>&nbsp;" . $skarm * 100 . " kg" . "</td>";
-echo "<td>&nbsp;" . $statdator * 520 . " kg" . "</td>";
-echo "<td>&nbsp;" . $surfplatta * 100 . " kg" . "</td>";
+<table class="wp-table">
+    <tr>
+      <th>Enhet</th>
+      <th>Antal</th>
+      <th>CO₂</th>
+    </tr>
+    <tr>
+      <td>Mobiler</td>
+      <?php echo "<td>&nbsp;" . $mobil . "</td>";
+      echo "<td>&nbsp;" . $mobil * 70 . " kg" . "</td>";?>
+    </tr>
+    <tr>
+      <td>Laptops</td>
+      <?php
+      echo "<td>&nbsp;" . $laptop . "</td>";
+      echo "<td>&nbsp;" . $laptop * 160 . " kg" . "</td>";?>
+    </tr>
+    <tr>
+      <td>Skärmar</td>
+      <?php
+      echo "<td>&nbsp;" . $skarm . "</td>";
+      echo "<td>&nbsp;" . $skarm * 100 . " kg" . "</td>";?>
+    </tr>
+    <tr>
+      <td>Stationär dator</td>
+      <?php
+      echo "<td>&nbsp;" . $statdator . "</td>";
+      echo "<td>&nbsp;" . $statdator * 520 . " kg" . "</td>";?>
 
-echo "</tr>";
-
-?>
+    </tr>
+    <tr>
+      <td>Surfplatta</td>
+      <?php
+      echo "<td>&nbsp;" . $surfplatta . "</td>";
+      echo "<td>&nbsp;" . $surfplatta * 100 . " kg" . "</td>";?>
+    </tr>
+  </table>
 </table> <br />
    <div class="total">
    <?php
 //totala mängden co2 behövs uppdateras med övrigt och pryl 6
-echo "Totala mängden co2: " . $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100 . "kg";
-?><br>
+echo "<p id='Totalmangd'>Totala mängden co2: " . $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100 . "kg </p>";
+?>
 <?php
 $Total = $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100;
-if ($Total == 0){
-echo "Detta är inget";
-}
-elseif ($Total < 100){
-    echo "Detta är samma sak som";
-}
-elseif ($Total < 1000) {
-   echo "Detta är mycket";
-}
-elseif ($Total < 2000){
-    echo "Detta är jättemycket";
-}
-elseif ($Total < 4000){
-    echo "Detta är jättemycket";
-}
+echo "Detta är samma sak som: ". ceil($Total*1000 / 240) . "km med Bensinbil <br/>";
+echo "Detta är samma sak som: ". ceil($Total*1000 / 210) . "km med Diselbil <br/>";
+echo "Detta är samma sak som: ". ceil($Total*1000 / 90) . "km med Elbil";
 
 
 ?>
 </div>
+<div class="karta">
 <?php
 echo "<p id='Karta'>Karta där man lämnar sina tekniska enheter<br/></p>";
-?>
+?></div>
     <div id='map'></div>
     <!--Det är div id='map' som skapar själva kartan -->
 
