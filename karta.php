@@ -17,7 +17,7 @@ if (isset($_POST['mobil'], $_POST['laptop'], $_POST['skarm'], $_POST['statdator'
 //test insert new data
 //print_r($db->insertNewItem([
 //    'phone' => '5',
-//    'laptop' => '5',
+//    'laptop' => '5', 
 //    'monitor' => '5',
 //    'stationary' => '5',
 //    'misc' => '5'

@@ -116,9 +116,9 @@ $(".input-number").keydown(function (e) {
 
 function mapContent() {
   var api_key = "QISAgbgPAJM82OrxXXStAQ34NIBwkrvd";
-  var latAndLong = { lat: 62.39183290119345, lng: 17.307594418293636 };
-  var zoomLevel = 14;
-  var yourAddress = "Systembolaget, Sjögatan 16, 852 30 Sundsvall";
+  var latAndLong = { lat: 62.39514901159899, lng: 17.309021334034593 };
+  var zoomLevel = 14; 
+  var yourAddress = "Sundsvalls Kommunhus, Centralgatan 4";
 
   var map = tt.map({
     container: "map",

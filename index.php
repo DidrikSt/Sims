@@ -35,7 +35,7 @@
 </div>
             <div class="container">
                 <div class="box">
-                    <p id="hoverP"> Mobiltelefon  * </p> 
+                <p title="Vid inlämning av iPhone stäng av <i>Hitta min iPhone </i>"> Mobiltelefon  * </p> 
                     <?PHP
 $filepath = 'uploads\mobil.jpg';
 echo '<img src="' . $filepath . '" width="100%" 
