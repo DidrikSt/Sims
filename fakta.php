@@ -5,9 +5,26 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/css.css">
+    <style>
+img {  
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-top: 100px;
+}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hey</title>
 </head>
 <body>
+<?php
+$profpic = "uploads/Faktasida.jpg";
+?>
+<?PHP
+$filepath = 'uploads\Faktasida.jpg';
+echo '<img src="' . $filepath . '">';
+?>
 </body>
-
 </html>
