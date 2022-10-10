@@ -29,8 +29,10 @@ echo "<p id='faktaSurfplatta'>Surfplatta<br/></p>";
     <form method="POST" action="karta.php">
         <div class="Wallpaper">
         <div class="sammanfattning">
-        <h2> Vi vill veta en uppskattning på ungefär hur mycket av dessa 5 sakerna som du har liggandes hemma som kan tänkas återanvändas eller återvinnas. 
-            Du får reda på hur mycket co2 detta skulle spara och på nästa sida får du reda på hur du ska gå tillväga och hur mycket alla dina saker du lämnar in hade kunnat vara istället.</h2>
+        <h3>Hej och välkommen!</h3>
+        <h2>Nedanför kan ni se olika alternativ där ni kan trycka i vad ni vill lämna in och hur många av de olika alternativen. 
+            Vi är extremt tacksamma över att ni väljer att lämna in er elektronik till oss, bidraget kommer att göra stor skillnad för de på Kyeshero Sjukhuset i Kongo.<br>
+            Tack så hemskt mycket att du väljer att skicka in dina gamla elektroniska prylar.</h2>
 </div>
             <div class="container">
                 <div class="box">
