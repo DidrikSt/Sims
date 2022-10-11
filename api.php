@@ -34,3 +34,30 @@ class api
  }*/
 }
 ?>
+
+<?php
+
+$db = new api;
+
+if (isset($_POST['mobil'], $_POST['laptop'], $_POST['skarm'], $_POST['statdator'], $_POST['surfplatta'])) {
+  $insertable = $db->insertNewItem([
+    'mobil' => $_POST['mobil'],
+    'laptop' => $_POST['laptop'],
+    'skarm' => $_POST['skarm'],
+    'statdator' => $_POST['statdator'],
+    'surfplatta' => $_POST['surfplatta']
+  ]);
+  if ($insertable) {
+
+  }
+}
+//test insert new data
+//print_r($db->insertNewItem([
+//    'phone' => '5',
+//    'laptop' => '5', 
+//    'monitor' => '5',
+//    'stationary' => '5',
+//    'misc' => '5'
+//]));
+//exit();
+?>
