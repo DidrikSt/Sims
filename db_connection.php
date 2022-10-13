@@ -16,8 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $surfplatta = $_POST['surfplatta'];
 }
 
-$sql = "INSERT INTO Products (mobil, laptop, skarm, statdator,surfplatta) VALUES ('$mobil','$laptop','$skarm','$statdator','$surfplatta')";
-$query = mysqli_query($conn,$sql);
+
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());

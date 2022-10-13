@@ -1,6 +1,9 @@
 <?php 
     session_start();
 
+    include("db_connection.php");
+    OpenCon();
+    //conn start 
     if (!empty($_REQUEST["submit"])) {
         $_SESSION["phones"] = $_POST["mobil"];
         $_SESSION["laptops"] = $_POST["laptop"];
@@ -8,9 +11,13 @@
         $_SESSION["PC"] = $_POST["statdator"];
         $_SESSION["tablets"] = $_POST["surfplatta"];
         
+        $sql = "INSERT INTO Products (mobil, laptop, skarm, statdator,surfplatta) VALUES ('$mobil','$laptop','$skarm','$statdator','$surfplatta')";
+        $query = mysqli_query($conn,$sql);
+
         header("Location: karta.php");
-        exit();
+        CloseCon($conn);
         
+        exit();
     }
     
 ?>
