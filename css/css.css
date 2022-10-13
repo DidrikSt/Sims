@@ -23,7 +23,6 @@ p {
   font-size: 40%;
 }
 
-
 #feedback {
   font-size: 50px;
   font-weight: bold;
@@ -143,8 +142,8 @@ td {
   border: 1px solid black;
 }
 #submit {
-  width: 10em;
-  height: 5em;
+  width: 100%;
+  height: 50%;
   background-color: #84daa9;
   border: none;
   color: black;
