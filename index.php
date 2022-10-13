@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="box2">
+                <div class="box">
                     <p> Stationär </p>
                     <?PHP
 $filepath = 'uploads\stationar.jpg';
@@ -167,7 +167,7 @@ echo '<img src="' . $filepath . '" width="100%"
                         </span>
                     </div>
                 </div>
-                <div class="box2">
+                <div class="box">
                     <p> Surfplatta </p>
                     <?PHP
 $filepath = 'uploads\tablet.jpg';
@@ -192,14 +192,11 @@ echo '<img src="' . $filepath . '" width="100%"
                         </span>
                     </div>
                 </div>
+                <div class="box"><br>
+<input type="submit" name="submit" id="submit" value="Lämna in" />
+</div>
+   </form>
             </div>
-            
-            <br><br><br>
-            <div style="text-align:center" >
-
-                <input type="submit" name="submit" id="submit" value="Lämna in" />
-    </form>
-    </div>
     </body>
 
     </html>
