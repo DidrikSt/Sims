@@ -1,22 +1,34 @@
 <?php 
     session_start();
 
-    include("db_connection.php");
-    //conn start 
+    // include("db_connection.php");
+    error_reporting(-1);            // Report all errors
+    ini_set("display_errors", 1);   // display all errors  
+
+    $dbservername = "studentmysql.miun.se";
+    $dbusername = "fist2000";
+    $dbpassword = "7zaeup47";
+    $dbname = "fist2000";
+
+    # kontaktar databasen eller visa felmeddelande vid error
+    $db = new mysqli("$dbservername", "$dbusername", "$dbpassword", "$dbname"); 
+    if ($db->connect_errno > 0 ) { die ('Fel vid anslutning [' . $db->connect_error . ']'); }
+
+
+
     if (!empty($_REQUEST["submit"])) {
-        OpenCon();
         $_SESSION["phones"] = $_POST["mobil"];
         $_SESSION["laptops"] = $_POST["laptop"];
         $_SESSION["monitors"] = $_POST["skarm"];
         $_SESSION["PC"] = $_POST["statdator"];
         $_SESSION["tablets"] = $_POST["surfplatta"];
-        
-        $sql = "INSERT INTO Products (mobil, laptop, skarm, statdator,surfplatta) VALUES ('$mobil','$laptop','$skarm','$statdator','$surfplatta')";
-        $query = mysqli_query($conn,$sql);
 
-        header("Location: karta.php");
-        CloseCon($conn);
+        $stmt = $db->prepare("INSERT INTO Products (mobil, laptop, skarm, statdator, surfplatta) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $_POST["mobil"], $_POST["laptop"], $_POST["skarm"], $_POST["statdator"], $_POST["surfplatta"]);
+        $stmt->execute();        
         
+        unset($_REQUEST["submit"]); //disablear submit-knappen
+        header("Location: karta.php");
         exit();
     }
     
