@@ -1,3 +1,19 @@
+<?php 
+    session_start();
+
+    if (!empty($_REQUEST["submit"])) {
+        $_SESSION["phones"] = $_POST["mobil"];
+        $_SESSION["laptops"] = $_POST["laptop"];
+        $_SESSION["monitors"] = $_POST["skarm"];
+        $_SESSION["PC"] = $_POST["statdator"];
+        $_SESSION["tablets"] = $_POST["surfplatta"];
+        
+        header("Location: karta.php");
+        exit();
+        
+    }
+    
+?>
 <!DOCTYPE html>
 
 <head>
@@ -16,38 +32,43 @@
     <div class="feedback">
         <h1 id="feedback"> Feedback <h1>
             <?php
-                echo "<p id='faktaMobil'>Mobilfakta<br/></p>";
-                echo "<p id='faktaLaptop'>LaptopFakta<br/></p>";
-                echo "<p id='faktaSkarm'>SkärmFakta<br/></p>";
-                echo "<p id='faktaStat'>StationärFakta<br/></p>";
-                echo "<p id='faktaSurfplatta'>Surfplatta<br/></p>";
+                echo "<p id='faktaMobil'>0 mobiler orsakar kg 0 co2<br/></p>";
+                echo "<p id='faktaLaptop'>0 laptops orsakar kg 0 co2<br/></p>";
+                echo "<p id='faktaSkarm'>0 skärmar orsakar kg 0 co2<br/></p>";
+                echo "<p id='faktaStat'>0 Stationära orsakar kg 0 co2<br/></p>";
+                echo "<p id='faktaSurfplatta'>0 surfplattor orsakar kg 0 co2<br/></p>";
             ?>
     </div>
     
     <!-- Container med bilderna och plus minus för att öka minska värde -->
-    <form method="POST" action="karta.php">
+    <form method="post" action="">
         <div class="Wallpaper">
         <div class="sammanfattning">
         <h3>Hej och välkommen!</h3>
         <h2>Nedanför kan ni se olika alternativ där ni kan trycka i vad ni vill lämna in och hur många av de olika alternativen. 
             Vi är extremt tacksamma över att ni väljer att lämna in er elektronik till oss, bidraget kommer att göra stor skillnad för de på Kyeshero Sjukhuset i Kongo.<br>
             Tack så hemskt mycket att du väljer att skicka in dina gamla elektroniska prylar.</h2>
-</div>
+        <?php 
+        echo "asssss";
+
+        echo $_SESSION["phones"] ;
+        echo $_SESSION["laptops"] ;
+        echo $_SESSION["monitors"];
+        ?>    
+        
+        </div>
             <div class="container">
                 <div class="box">
                 <p title="Vid inlämning av iPhone stäng av Hitta min iPhone"> Mobiltelefon  * </p> 
                     <?PHP
-$filepath = 'uploads\mobil.jpg';
-echo '<img src="' . $filepath . '" width="100%" 
-        height="100%">';
-
-?>
+                        $filepath = 'uploads\mobil.jpg';
+                        echo '<img src="' . $filepath . '" width="100%" height="100%">';
+                    ?>
                     <p>
                     </p>
                     <div class="input-group">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-number" disabled="disabled"
-                                data-type="minus" data-field="mobil">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="mobil">
                                 <span class="glyphicon glyphicon-minus"></span>
                             </button>
                         </span>
@@ -65,10 +86,9 @@ echo '<img src="' . $filepath . '" width="100%"
                 <div class="box">
                     <p> Laptop </p>
                     <?PHP
-$filepath = 'uploads\laptop.jpg';
-echo '<img src="' . $filepath . '" width="100%" 
-        height="100%">';
-?>
+                        $filepath = 'uploads\laptop.jpg';
+                        echo '<img src="' . $filepath . '" width="100%" height="100%">';
+                    ?>
                     <p>
                     </p>
                     <div class="input-group">
@@ -91,10 +111,9 @@ echo '<img src="' . $filepath . '" width="100%"
                 <div class="box">
                     <p> Skärm </p>
                     <?PHP
-$filepath = 'uploads\skarm.jpg';
-echo '<img src="' . $filepath . '" width="100%" 
-        height="100%">';
-?>
+                        $filepath = 'uploads\skarm.jpg';
+                        echo '<img src="' . $filepath . '" width="100%"     height="100%">';
+                    ?>
                     <p>
                     </p>
                     <div class="input-group">
@@ -171,7 +190,7 @@ echo '<img src="' . $filepath . '" width="100%"
             <br><br><br>
             <div style="text-align:center" >
 
-                <input type="submit" id="submit" value="Lämna in" />
+                <input type="submit" name="submit" id="submit" value="Lämna in" />
     </form>
     </div>
     </body>

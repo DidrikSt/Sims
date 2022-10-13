@@ -1,7 +1,13 @@
 <?php
-require_once('./api.php');
+    session_start();
+
+
+
+
+//require_once('./api.php');
 
 error_reporting(E_ERROR | E_PARSE);
+
 ?>
 <!DOCTYPE html>
 
@@ -21,14 +27,16 @@ error_reporting(E_ERROR | E_PARSE);
 
 <body>
   <?php
-echo "<h2>Projekt med Atea</h2>";
 
-$mobil = $_POST["mobil"];
-$laptop = $_POST["laptop"];
-$skarm = $_POST["skarm"];
-$statdator = $_POST["statdator"];
-$surfplatta = $_POST["surfplatta"];
-//$pryl6 = $_POST["pryl6"];
+
+// $mobil = $_POST["mobil"];
+// $laptop = $_POST["laptop"];
+// $skarm = $_POST["skarm"];
+// $statdator = $_POST["statdator"];
+// $surfplatta = $_POST["surfplatta"];
+
+echo "<h2>placeholder for css </h2>";
+
 ?>
   <br>
   <p id="sammanställningsID"> Sammanställning av dina elektroniska apparater
@@ -40,46 +48,47 @@ $surfplatta = $_POST["surfplatta"];
     </tr>
     <tr>
       <td>Mobiler</td>
-      <?php echo "<td>&nbsp;" . $mobil . "</td>";
-echo "<td>&nbsp;" . $mobil * 70 . " kg" . "</td>"; ?>
+      <?php 
+          echo "<td>&nbsp;" . $_SESSION["phones"] . "</td>";
+          echo "<td>&nbsp;" . $_SESSION["phones"] * 70 . " kg" . "</td>"; ?>
     </tr>
     <tr>
       <td>Laptops</td>
       <?php
-echo "<td>&nbsp;" . $laptop . "</td>";
-echo "<td>&nbsp;" . $laptop * 160 . " kg" . "</td>"; ?>
+        echo "<td>&nbsp;" . $_SESSION["laptops"] . "</td>";
+        echo "<td>&nbsp;" . $_SESSION["laptops"] * 280 . " kg" . "</td>"; ?>
     </tr>
     <tr>
       <td>Skärmar</td>
       <?php
-echo "<td>&nbsp;" . $skarm . "</td>";
-echo "<td>&nbsp;" . $skarm * 100 . " kg" . "</td>"; ?>
-    </tr>
+        echo "<td>&nbsp;" . $_SESSION["monitors"] . "</td>";
+        echo "<td>&nbsp;" . $_SESSION["monitors"] * 480 . " kg" . "</td>"; ?>
+      </tr>
     <tr>
       <td>Stationär dator</td>
       <?php
-echo "<td>&nbsp;" . $statdator . "</td>";
-echo "<td>&nbsp;" . $statdator * 520 . " kg" . "</td>"; ?>
-
+        echo "<td>&nbsp;" . $_SESSION["PC"] . "</td>";
+        echo "<td>&nbsp;" . $_SESSION["PC"] * 175 . " kg" . "</td>"; ?>
     </tr>
     <tr>
       <td>Surfplatta</td>
       <?php
-echo "<td>&nbsp;" . $surfplatta . "</td>";
-echo "<td>&nbsp;" . $surfplatta * 100 . " kg" . "</td>"; ?>
+        echo "<td>&nbsp;" . $_SESSION["tablets"] . "</td>";
+        echo "<td>&nbsp;" . $_SESSION["tablets"] * 110 . " kg" . "</td>"; ?>
     </tr>
   </table>
   </table> <br />
   <div class="total">
     <?php
 //totala mängden co2 behövs uppdateras med övrigt och pryl 6
-echo "<p id='Totalmangd'>Totala mängden co2: " . $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100 . "kg </p>";
+// $Total = $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100;
+$Total = $_SESSION["phones"] *70 + $_SESSION["laptops"]*280 + $_SESSION["monitors"]*450 + $_SESSION["PC"]*175 + $_SESSION["tablets"]*110;
+echo "<p id='Totalmangd'>Totala mängden CO₂: " . $Total . "kg </p>";
 ?>
     <?php
-$Total = $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100;
-echo "Detta är samma sak som: " . ceil($Total * 1000 / 240) . "km med Bensinbil <br/>";
-echo "Detta är samma sak som: " . ceil($Total * 1000 / 210) . "km med Diselbil <br/>";
-echo "Detta är samma sak som: " . ceil($Total * 1000 / 90) . "km med Elbil";
+echo "Det motsvarar: " . ceil($Total * 1000 / 240) . "km med Bensinbil <br/>";
+echo "Det motsvarar: " . ceil($Total * 1000 / 210) . "km med Diselbil <br/>";
+echo "Det motsvarar: " . ceil($Total * 1000 / 90) . "km med Elbil";
 
 
 ?>
@@ -87,6 +96,9 @@ echo "Detta är samma sak som: " . ceil($Total * 1000 / 90) . "km med Elbil";
   <div class="karta">
     <?php
 echo "<p id='Karta'>Karta där man lämnar sina tekniska enheter<br/></p>";
+
+
+
 ?>
   </div>
   <div id='map'></div>

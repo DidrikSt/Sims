@@ -71,19 +71,19 @@ function facts(amount, type) {
     document.getElementById("faktaMobil").innerHTML =
       amount + " mobiler orsakar " + kg + "kg co2";
   } else if (type == "laptop") {
-    kg = amount * 160;
+    kg = amount * 280;
     document.getElementById("faktaLaptop").innerHTML =
       amount + " laptops orsakar " + kg + "kg co2";
   } else if (type == "skarm") {
-    kg = amount * 100;
+    kg = amount * 450;
     document.getElementById("faktaSkarm").innerHTML =
       amount + " skärmar orsakar " + kg + "kg co2";
   } else if (type == "statdator") {
-    kg = amount * 520;
+    kg = amount * 175;
     document.getElementById("faktaStat").innerHTML =
       amount + " Stationära orsakar " + kg + "kg co2";
   } else if (type == "surfplatta") {
-    kg = amount * 100;
+    kg = amount * 110;
     document.getElementById("faktaSurfplatta").innerHTML =
       amount + " Surfplatta orsakar " + kg + "kg co2";
   } else {
