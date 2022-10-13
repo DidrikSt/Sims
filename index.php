@@ -2,9 +2,9 @@
     session_start();
 
     include("db_connection.php");
-    OpenCon();
     //conn start 
     if (!empty($_REQUEST["submit"])) {
+        OpenCon();
         $_SESSION["phones"] = $_POST["mobil"];
         $_SESSION["laptops"] = $_POST["laptop"];
         $_SESSION["monitors"] = $_POST["skarm"];
@@ -56,11 +56,7 @@
             Vi är extremt tacksamma över att ni väljer att lämna in er elektronik till oss, bidraget kommer att göra stor skillnad för de på Kyeshero Sjukhuset i Kongo.<br>
             Tack så hemskt mycket att du väljer att skicka in dina gamla elektroniska prylar.</h2>
         <?php 
-        echo "asssss";
-
-        echo $_SESSION["phones"] ;
-        echo $_SESSION["laptops"] ;
-        echo $_SESSION["monitors"];
+       
         ?>    
         
         </div>
