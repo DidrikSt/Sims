@@ -18,6 +18,7 @@
             
             <div class="nav_links">
                 <ul>
+                    <li><a href=index.php>Hem</a></li>
                     <li><a href=karta.php>Karta</a></li>
                     <li><a href=fakta.php>Fakta</a></li>
                     <li><a href=omoss.php>Om oss</a></li>

@@ -36,6 +36,7 @@
 <!DOCTYPE html>
 
 <head>
+    <title>Inlämning av eletronik</title>
     <?php include 'navbar.php'?>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -51,11 +52,11 @@
     <div class="feedback">
         <h1 id="feedback"> Feedback <h1>
             <?php
-                echo "<p id='faktaMobil'>0 mobiler orsakar kg 0 co2<br/></p>";
-                echo "<p id='faktaLaptop'>0 laptops orsakar kg 0 co2<br/></p>";
-                echo "<p id='faktaSkarm'>0 skärmar orsakar kg 0 co2<br/></p>";
-                echo "<p id='faktaStat'>0 Stationära orsakar kg 0 co2<br/></p>";
-                echo "<p id='faktaSurfplatta'>0 surfplattor orsakar kg 0 co2<br/></p>";
+                echo "<p id='faktaMobil'>0 mobiler orsakar 0kg co2<br/></p>";
+                echo "<p id='faktaLaptop'>0 laptops orsakar 0kg co2<br/></p>";
+                echo "<p id='faktaSkarm'>0 skärmar orsakar 0kg co2<br/></p>";
+                echo "<p id='faktaStat'>0 Stationära orsakar 0kg co2<br/></p>";
+                echo "<p id='faktaSurfplatta'>0 surfplattor orsakar 0kg co2<br/></p>";
             ?>
     </div>
     
