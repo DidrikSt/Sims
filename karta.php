@@ -104,9 +104,9 @@ echo "Det motsvarar: " . ceil($Total * 1000 / 90) . "km med Elbil";
     <?php
   echo "</br></br></br></br>";
   echo "<p id='Karta'>Karta där man lämnar sina tekniska enheter<br/>";
-  echo "Återtaget sker 08.00 till 13.00 den 24-27 Oktober<br/></p>";
+  echo "Återtaget sker 08:00 till 13:00 den 25-27 Oktober<br/></p>";
 ?>
-
+ 
   </div>
   <div id='map'></div>
   <!--Det är div id='map' som skapar själva kartan -->
