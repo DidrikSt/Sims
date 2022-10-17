@@ -47,6 +47,7 @@
 </head>
 <body>
     <?php
+
     echo "<br><br><br><br>"
     ?>
     <div class="feedback">
@@ -57,6 +58,7 @@
                 echo "<p id='faktaSkarm'>0 skärmar orsakar 0kg co2<br/></p>";
                 echo "<p id='faktaStat'>0 Stationära orsakar 0kg co2<br/></p>";
                 echo "<p id='faktaSurfplatta'>0 surfplattor orsakar 0kg co2<br/></p>";
+
             ?>
     </div>
     
@@ -64,14 +66,14 @@
     <form method="post" action="">
         <div class="Wallpaper">
         <div class="sammanfattning">
-        <h3>Hej och välkommen!</h3>
-        <h2>Nedanför kan ni se olika alternativ där ni kan trycka i vad ni vill lämna in och hur många av de olika alternativen. 
-            Vi är extremt tacksamma över att ni väljer att lämna in er elektronik till oss, bidraget kommer att göra stor skillnad för de på Kyeshero Sjukhuset i Kongo.<br>
-            Tack så hemskt mycket att du väljer att skicka in dina gamla elektroniska prylar.</h2>
-        <?php 
-       
-        ?>    
+            <h3>Hej och välkommen!</h3>
+            <h2>Nedanför kan ni se olika alternativ där ni kan trycka i vad ni vill lämna in och hur många av de olika alternativen. 
+                Vi är extremt tacksamma över att ni väljer att lämna in er elektronik till oss, bidraget kommer att göra stor skillnad för de på Kyeshero Sjukhuset i Kongo.<br>
+                Tack så hemskt mycket att du väljer att skicka in dina gamla elektroniska prylar.</h2>
+            <?php 
         
+            ?>    
+            
         </div>
             <div class="container">
                 <div class="box">
@@ -153,10 +155,9 @@
                 <div class="box">
                     <p> Stationär </p>
                     <?PHP
-$filepath = 'uploads\stationar.jpg';
-echo '<img src="' . $filepath . '" width="100%" 
-        height="100%">';
-?>
+                        $filepath = 'uploads\stationar.jpg';
+                        echo '<img src="' . $filepath . '" width="100%" height="100%">'; 
+                    ?>
                     <p>
                     </p>
                     <div class="input-group">
@@ -179,10 +180,10 @@ echo '<img src="' . $filepath . '" width="100%"
                 <div class="box">
                     <p> Surfplatta </p>
                     <?PHP
-$filepath = 'uploads\tablet.jpg';
-echo '<img src="' . $filepath . '" width="100%" 
-        height="100%">';
-?>
+                        $filepath = 'uploads\tablet.jpg';
+                        echo '<img src="' . $filepath . '" width="100%" 
+                                height="100%">';
+                    ?>
                     <p>
                     </p>
                     <div class="input-group">
@@ -201,10 +202,11 @@ echo '<img src="' . $filepath . '" width="100%"
                         </span>
                     </div>
                 </div>
-                <div class="box"><br>
-<input type="submit" name="submit" id="submit" value="Lämna in" />
+                <div class="box">
+                    <p id="extrainfo"> *Vid inlämning av</br> iPhone stäng av</br> <i>Hitta min iPhone</i> </p>
+                <input type="submit" name="submit" id="submit" value="Lämna in" />
 </div>
-   </form>
+    </form>
             </div>
     </body>
 

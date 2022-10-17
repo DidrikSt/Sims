@@ -36,6 +36,7 @@ error_reporting(E_ERROR | E_PARSE);
 // $surfplatta = $_POST["surfplatta"];
 
 echo "<h2>placeholder for css </h2>";
+$Total = $_SESSION["phones"] *70 + $_SESSION["laptops"]*280 + $_SESSION["monitors"]*450 + $_SESSION["PC"]*175 + $_SESSION["tablets"]*110;
 
 ?>
   <br>
@@ -76,13 +77,19 @@ echo "<h2>placeholder for css </h2>";
         echo "<td>&nbsp;" . $_SESSION["tablets"] . "</td>";
         echo "<td>&nbsp;" . $_SESSION["tablets"] * 110 . " kg" . "</td>"; ?>
     </tr>
+    <tr>
+      <td>Total</td>
+      <?php
+        echo "<td>&nbsp;" . "- " . "</td>";
+        echo "<td>&nbsp;" . $Total . " kg</td>"; ?>
+    </tr>
+    
   </table>
   </table> <br />
   <div class="total">
     <?php
 //totala mängden co2 behövs uppdateras med övrigt och pryl 6
 // $Total = $mobil * 70 + $laptop * 160 + $skarm * 100 + $statdator * 520 + $surfplatta * 100;
-$Total = $_SESSION["phones"] *70 + $_SESSION["laptops"]*280 + $_SESSION["monitors"]*450 + $_SESSION["PC"]*175 + $_SESSION["tablets"]*110;
 echo "<p id='Totalmangd'>Totala mängden CO₂: " . $Total . "kg </p>";
 ?>
     <?php
@@ -95,11 +102,11 @@ echo "Det motsvarar: " . ceil($Total * 1000 / 90) . "km med Elbil";
   </div>
   <div class="karta">
     <?php
-echo "<p id='Karta'>Karta där man lämnar sina tekniska enheter<br/></p>";
-
-
-
+  echo "</br></br></br></br>";
+  echo "<p id='Karta'>Karta där man lämnar sina tekniska enheter<br/>";
+  echo "Återtaget sker 08.00 till 13.00 den 24-27 Oktober<br/></p>";
 ?>
+
   </div>
   <div id='map'></div>
   <!--Det är div id='map' som skapar själva kartan -->
