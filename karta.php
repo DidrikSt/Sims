@@ -94,7 +94,7 @@ echo "<p id='Totalmangd'>Totala mängden CO₂: " . $Total . "kg </p>";
 ?>
     <?php
 echo "Det motsvarar: " . ceil($Total * 1000 / 240) . "km med Bensinbil <br/>";
-echo "Det motsvarar: " . ceil($Total * 1000 / 210) . "km med Diselbil <br/>";
+echo "Det motsvarar: " . ceil($Total * 1000 / 210) . "km med Dieselbil <br/>";
 echo "Det motsvarar: " . ceil($Total * 1000 / 90) . "km med Elbil";
 
 
